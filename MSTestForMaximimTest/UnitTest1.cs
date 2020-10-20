@@ -13,7 +13,7 @@ namespace MSTestForMaximimTest
         public void MaximumNumberInFirstPosition()
         {
             // Arrange
-            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(500, 30, 45);
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(new int[] { 500, 30, 45 });
 
             // Act
             int expected = maximumTesterInt.TestMaximum();
@@ -29,7 +29,7 @@ namespace MSTestForMaximimTest
         public void MaximumNumberInSecondPosition()
         {
             // Arrange
-            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(5, 30, 5);
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(new int[] { 5, 30, 5 });
 
             // Act
             int expected = maximumTesterInt.TestMaximum();
@@ -45,7 +45,7 @@ namespace MSTestForMaximimTest
         public void MaximumNumberInThirdPosition()
         {
             // Arrange
-            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(5, 30, 500);
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(new int[] { 5, 30, 500 });
 
             // Act
             int expected = maximumTesterInt.TestMaximum();
@@ -61,7 +61,7 @@ namespace MSTestForMaximimTest
         public void MaximumFloatInFirstPosition()
         {
             // Arrange
-            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 30.3f, 5.5f);
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(new float[] { 50.2f, 30.3f, 5.5f });
 
             // Act
             float expected = maximumTesterFloat.TestMaximum();
@@ -77,7 +77,7 @@ namespace MSTestForMaximimTest
         public void MaximumFloatInSecondPosition()
         {
             // Arrange
-            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 500.5f, 30.3f);
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(new float[] { 50.2f, 500.5f, 30.3f });
 
             // Act
             float expected = maximumTesterFloat.TestMaximum();
@@ -93,7 +93,7 @@ namespace MSTestForMaximimTest
         public void MaximumFloatInThirdPosition()
         {
             // Arrange
-            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 500.5f, 3000.3f);
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(new float[] { 50.2f, 500.5f, 3000.3f });
 
             // Act
             float expected = maximumTesterFloat.TestMaximum();
@@ -109,7 +109,7 @@ namespace MSTestForMaximimTest
         public void MaximumStringInFirstPosition()
         {
             // Arrange
-            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Peach", "Apple", "Banana");
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>(new string[] { "Peach", "Apple", "Banana" });
 
             // Act
             string expected = maximumTesterString.TestMaximum();
@@ -125,7 +125,7 @@ namespace MSTestForMaximimTest
         public void MaximumStringInSecondPosition()
         {
             // Arrange
-            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Apple", "Peach", "Banana");
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>(new string[] { "Apple", "Peach", "Banana" });
 
             // Act
             string expected = maximumTesterString.TestMaximum();
@@ -141,7 +141,7 @@ namespace MSTestForMaximimTest
         public void MaximumStringInThirdPosition()
         {
             // Arrange
-            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Apple", "Banana", "Peach");
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>(new string[] { "Apple", "Banana", "Peach" });
 
             // Act
             string expected = maximumTesterString.TestMaximum();

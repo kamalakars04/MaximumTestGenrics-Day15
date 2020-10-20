@@ -6,22 +6,15 @@
 
     public class MaximumTester<T> where T : IComparable
     {
-        private T entry1;
-        private T entry2;
-        private T entry3;
+        private T[] entries;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MaximumTester{T}"/> class.
         /// </summary>
-        /// <param name="entry1">The entry1.</param>
-        /// <param name="entry2">The entry2.</param>
-        /// <param name="entry3">The entry3.</param>
-        public MaximumTester(T entry1, T entry2, T entry3)
+        /// <param name="entries">The entries.</param>
+        public MaximumTester(T[] entries)
         {
-            this.entry1 = entry1;
-            this.entry2 = entry2;
-            this.entry3 = entry3;
-
+            this.entries = entries;
         }
 
         /// <summary>
@@ -30,7 +23,7 @@
         /// <returns></returns>
         public T TestMaximum()
         {
-            return TestMaximum(entry1, entry2, entry3);
+            return TestMaximum(entries);
         }
         /// <summary>
         /// Tests the maximum.
@@ -39,16 +32,20 @@
         /// <param name="entry2">The entry2.</param>
         /// <param name="entry3">The entry3.</param>
         /// <returns></returns>
-        public static T TestMaximum(T entry1, T entry2, T entry3)
+        private T TestMaximum(T[] entries)
         {
-            // Check the order of entry1 and entry2 and assigning it to maximum
-            // CompareTo returns 1 is entry1 > entry2 else -1
-            T maximum = entry1.CompareTo(entry2) == 1 ? entry1 : entry2;
+            Array.Sort(entries);
+            PrintMax(entries[^1]);
+            return entries[^1];
+        }
 
-            // Check the order of maximum and entry3 and assigning it to maximum
-            maximum = maximum.CompareTo(entry3) == 1 ? maximum : entry3;
-            Console.WriteLine("The maximum string is {0}", maximum);
-            return maximum;
+        /// <summary>
+        /// Prints the maximum.
+        /// </summary>
+        /// <param name="maxValue">The maximum value.</param>
+        private void PrintMax(T maxValue)
+        {
+            Console.WriteLine("The maximum string is {0}", entries[^1]);
         }
     }
 }
