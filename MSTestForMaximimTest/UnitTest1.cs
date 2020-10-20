@@ -9,7 +9,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 1.1 Maximum  number in first position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("int")]
         public void MaximumNumberInFirstPosition()
         {
             // Arrange
@@ -25,7 +25,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 1.2 Maximum  number in second position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("int")]
         public void MaximumNumberInSecondPosition()
         {
             // Arrange
@@ -41,7 +41,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 1.3 Maximum  number in third position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("int")]
         public void MaximumNumberInThirdPosition()
         {
             // Arrange
@@ -57,7 +57,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 2.1 Maximum  number in first position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("float")]
         public void MaximumFloatInFirstPosition()
         {
             // Arrange
@@ -73,7 +73,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 2.2 Maximum  number in second position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("float")]
         public void MaximumFloatInSecondPosition()
         {
             // Arrange
@@ -89,7 +89,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 2.3 Maximum  number in third position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("float")]
         public void MaximumFloatInThirdPosition()
         {
             // Arrange
@@ -105,7 +105,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 3.1 Maximum string in first position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("string")]
         public void MaximumStringInFirstPosition()
         {
             // Arrange
@@ -121,7 +121,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 3.2 Maximum  string in second position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("string")]
         public void MaximumStringInSecondPosition()
         {
             // Arrange
@@ -137,7 +137,7 @@ namespace MSTestForMaximimTest
         /// <summary>
         /// TC 3.3 Maximum string in third position.
         /// </summary>
-        [TestMethod]
+        [TestMethod, TestCategory("string")]
         public void MaximumStringInThirdPosition()
         {
             // Arrange
