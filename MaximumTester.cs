@@ -43,5 +43,24 @@ namespace MaximumTest
             Console.WriteLine("The maximum float number is {0}", maximum);
             return maximum;
         }
+
+        /// <summary>
+        /// UC 3 Tests the maximum string.
+        /// </summary>
+        /// <param name="s1">The s1.</param>
+        /// <param name="s2">The s2.</param>
+        /// <param name="s3">The s3.</param>
+        /// <returns></returns>
+        public static string TestMaximumString(string s1, string s2, string s3)
+        {
+            // Check the order of num1 and num2 and assigning it to maximum
+            // CompareTo returns 1 is num1 > num2 else -1
+            string maximum = s1.CompareTo(s2) == 1 ? s1 : s2;
+
+            // Check the order of maximum and num3 and assigning it to maximum
+            maximum = maximum.CompareTo(s3) == 1 ? maximum : s3;
+            Console.WriteLine("The maximum string is {0}", maximum);
+            return maximum;
+        }
     }
 }

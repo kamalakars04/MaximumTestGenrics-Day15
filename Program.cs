@@ -17,6 +17,9 @@
 
             // Calling the TestMaximum static method for float
             float maximumFloat = MaximumTester.TestMaximumFloat(15.52f, 30.25f, 17.24f);
+
+            // Calling the TestMaximum static method for string
+            string maximumString = MaximumTester.TestMaximumString("Apple", "Peach", "Banana");
         }
     }
 }

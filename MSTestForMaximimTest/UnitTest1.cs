@@ -83,6 +83,44 @@ namespace MSTestForMaximimTest
             // Assert
             Assert.AreEqual(expected, 1000.2f);
         }
-    }
 
+        /// <summary>
+        /// TC 3.1 Maximum string in first position.
+        /// </summary>
+        [TestMethod]
+        public void MaximumStringInFirstPosition()
+        {
+            // Act
+            string expected = MaximumTester.TestMaximumString("Peach", "Banana", "Apple");
+
+            // Assert
+            Assert.AreEqual(expected, "Peach");
+        }
+
+        /// <summary>
+        /// TC 3.2 Maximum  string in second position.
+        /// </summary>
+        [TestMethod]
+        public void MaximumStringInSecondPosition()
+        {
+            // Act
+            string expected = MaximumTester.TestMaximumString("Apple", "Peach", "Banana");
+
+            // Assert
+            Assert.AreEqual(expected, "Peach");
+        }
+
+        /// <summary>
+        /// TC 3.3 Maximum string in third position.
+        /// </summary>
+        [TestMethod]
+        public void MaximumStringInThirdPosition()
+        {
+            // Act
+            string expected = MaximumTester.TestMaximumString("Apple", "Banana", "Peach");
+
+            // Assert
+            Assert.AreEqual(expected, "Peach");
+        }
+    }
 }
