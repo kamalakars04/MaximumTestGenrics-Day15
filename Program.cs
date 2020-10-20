@@ -12,14 +12,17 @@
         {
             Console.WriteLine("Welcome to TEST MAXIMUM program");
 
-            // Calling the TestMaximum static method for integer
-            int maximumInteger = MaximumTester<int>.TestMaximum(15, 30, 45);
+            // Initialising MaximumTester object for int
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(15, 15, 45);
+            maximumTesterInt.TestMaximum();
 
-            // Calling the TestMaximum static method for float
-            float maximumFloat = MaximumTester<float>.TestMaximum(15.52f, 30.25f, 17.24f);
+            // Initialising MaximumTester object for float
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(15.52f, 30.25f, 17.24f);
+            maximumTesterFloat.TestMaximum();
 
-            // Calling the TestMaximum static method for string
-            string maximumString = MaximumTester<string>.TestMaximum("Apple", "Peach", "Banana");
+            // Initialising MaximumTester object for int
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Apple", "Peach", "Banana");
+            maximumTesterString.TestMaximum();
         }
     }
 }

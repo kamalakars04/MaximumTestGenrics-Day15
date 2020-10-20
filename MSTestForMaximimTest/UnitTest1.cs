@@ -1,8 +1,8 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MaximumTest;
-
 namespace MSTestForMaximimTest
 {
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using MaximumTest;
+
     [TestClass]
     public class UnitTest1
     {
@@ -12,8 +12,11 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumNumberInFirstPosition()
         {
+            // Arrange
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(500, 30, 45);
+
             // Act
-            int expected = MaximumTester<int>.TestMaximum(500, 200, 100);
+            int expected = maximumTesterInt.TestMaximum();
 
             // Assert
             Assert.AreEqual(expected, 500);
@@ -25,11 +28,14 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumNumberInSecondPosition()
         {
+            // Arrange
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(5, 30, 5);
+
             // Act
-            int expected = MaximumTester<int>.TestMaximum(500, 1200, 100);
+            int expected = maximumTesterInt.TestMaximum();
 
             // Assert
-            Assert.AreEqual(expected, 1200);
+            Assert.AreEqual(expected, 30);
         }
 
         /// <summary>
@@ -38,11 +44,14 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumNumberInThirdPosition()
         {
+            // Arrange
+            MaximumTester<int> maximumTesterInt = new MaximumTester<int>(5, 30, 500);
+
             // Act
-            int expected = MaximumTester<int>.TestMaximum(500, 200, 1100);
+            int expected = maximumTesterInt.TestMaximum();
 
             // Assert
-            Assert.AreEqual(expected, 1100);
+            Assert.AreEqual(expected, 500);
         }
 
         /// <summary>
@@ -51,11 +60,14 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumFloatInFirstPosition()
         {
+            // Arrange
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 30.3f, 5.5f);
+
             // Act
-            float expected = MaximumTester<float>.TestMaximum(500.2f, 200.3f, 100.2f);
+            float expected = maximumTesterFloat.TestMaximum();
 
             // Assert
-            Assert.AreEqual(expected, 500.2f);
+            Assert.AreEqual(expected, 50.2f);
         }
 
         /// <summary>
@@ -64,11 +76,14 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumFloatInSecondPosition()
         {
+            // Arrange
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 500.5f, 30.3f);
+
             // Act
-            float expected = MaximumTester<float>.TestMaximum(500.2f, 2000.3f, 100.2f);
+            float expected = maximumTesterFloat.TestMaximum();
 
             // Assert
-            Assert.AreEqual(expected, 2000.3f);
+            Assert.AreEqual(expected, 500.5f);
         }
 
         /// <summary>
@@ -77,11 +92,14 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumFloatInThirdPosition()
         {
+            // Arrange
+            MaximumTester<float> maximumTesterFloat = new MaximumTester<float>(50.2f, 500.5f, 3000.3f);
+
             // Act
-            float expected = MaximumTester<float>.TestMaximum(500.2f, 200.3f, 1000.2f);
+            float expected = maximumTesterFloat.TestMaximum();
 
             // Assert
-            Assert.AreEqual(expected, 1000.2f);
+            Assert.AreEqual(expected, 3000.3f);
         }
 
         /// <summary>
@@ -90,8 +108,11 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumStringInFirstPosition()
         {
+            // Arrange
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Peach", "Apple", "Banana");
+
             // Act
-            string expected = MaximumTester<string>.TestMaximum("Peach", "Banana", "Apple");
+            string expected = maximumTesterString.TestMaximum();
 
             // Assert
             Assert.AreEqual(expected, "Peach");
@@ -103,8 +124,11 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumStringInSecondPosition()
         {
+            // Arrange
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Apple", "Peach", "Banana");
+
             // Act
-            string expected = MaximumTester<string>.TestMaximum("Apple", "Peach", "Banana");
+            string expected = maximumTesterString.TestMaximum();
 
             // Assert
             Assert.AreEqual(expected, "Peach");
@@ -116,8 +140,11 @@ namespace MSTestForMaximimTest
         [TestMethod]
         public void MaximumStringInThirdPosition()
         {
+            // Arrange
+            MaximumTester<string> maximumTesterString = new MaximumTester<string>("Apple", "Banana", "Peach");
+
             // Act
-            string expected = MaximumTester<string>.TestMaximum("Apple", "Banana", "Peach");
+            string expected = maximumTesterString.TestMaximum();
 
             // Assert
             Assert.AreEqual(expected, "Peach");
